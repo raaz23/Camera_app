@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+.filters{
+    width: 4rem;
+    height: 30rem;
+    position: fixed;
+    top:4rem;
+    left: 2rem;
+    border: 1px solid black;
+    z-index:2 ;
+}
+.filter{
+    height: calc((10 / 100) * 100%);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.video-container{
+    height: 100vh;
+    width: 100vw;
+    
+}
+video{
+    height: 100vh;
+    width: 100vw;
+}
+#capture{
+    position: fixed;
+    top: 60%;
+    right: 5rem;
+    height: 4rem;
+    width:4rem;
+    border-radius: 50%;
+    border: 3px solid grey;
+    z-index: 2;
+}
+#record{
+    height: 4rem;
+    width:4rem;
+    position: fixed;
+    top: 45%;
+    right: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid grey;
+    outline: none;
+    z-index:2;
+}
+span{
+height: 2rem;
+width: 2rem;
+display: inline-block;
+background-color: red;
+border-radius: 50%;
+margin-top: 4px;
+margin-left: 0.5px;
+}
+#capture span{
+    background-color:grey
+}
+
+.animation-capture{
+    animation-name: capture1;
+    animation-duration: 2s;
+}
+.animation-video{
+    animation-name: video1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes capture1{
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes video1{
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(1.35);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.filter-div{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+}
+.zoom_out{
+    width: 4rem;
+    height: 2rem;
+    position: fixed;
+    top: 30%;
+    right: 5rem;
+    color: grey;
+    background-color: rgba(242, 182, 182, 0.607);
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+    cursor: pointer;
+}
+.zoom_in{
+    width: 4rem;
+    height: 2rem;
+    position: fixed;
+    top: 20%;
+    right: 5rem;
+    color: grey;
+    background-color: rgba(242, 182, 182, 0.607);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+}
+#gallery{
+    position:fixed;
+    bottom: 4rem;
+    right: 5rem;
+    height: 4rem;
+    width:4rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index:10;
+}
